@@ -6,7 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-
+    apiKey: process.env.REACT_APP_FIREBASE_KEY,
+    authDomain: "pair69-dts-mini-project.firebaseapp.com",
+    projectId: "pair69-dts-mini-project",
+    storageBucket: "pair69-dts-mini-project.appspot.com",
+    messagingSenderId: "329887091951",
+    appId: "1:329887091951:web:4f8daed0ec7bb50ca51f1a"
 };
 
 // Initialize Firebase

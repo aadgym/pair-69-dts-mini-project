@@ -1,4 +1,5 @@
 import { MovieFilter,Logout } from '@mui/icons-material';
+import { IconButton } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -48,9 +49,9 @@ const Navbar = () => {
             ))}
           </Box>
           <Box sx={{ display: 'flex' }}>
-            <Box sx={{ padding: 1 }}>
+            <IconButton sx={{ padding: 1 }}>
                 <Logout onClick={onLogout} />
-            </Box>
+            </IconButton>
           </Box>
         </Toolbar>
       </AppBar>

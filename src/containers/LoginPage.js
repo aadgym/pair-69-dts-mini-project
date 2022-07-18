@@ -19,6 +19,7 @@ import { useNavigate } from 'react-router-dom';
 // const theme = createTheme();
 
 export default function LoginPage() {
+  console.log(process.env.REACT_APP_FIREBASE_KEY)
   const navigate=useNavigate();
   const [errorMessage, setErrorMessage] = React.useState('');
 
