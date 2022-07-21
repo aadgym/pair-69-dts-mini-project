@@ -10,8 +10,7 @@ const HomePage = () => {
   const [user, loading, error] = useAuthState(auth); 
   return (
     <Box sx={{ margin: 10 }}>
-      Home Page! <br />
-      current user: {user?.email}
+      Welcome {user?.email}
       {/* <CobaSwiper/> */}
       <MovieListTrending />
     </Box>

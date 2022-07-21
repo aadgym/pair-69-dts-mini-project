@@ -19,7 +19,7 @@ import { useNavigate } from 'react-router-dom';
 // const theme = createTheme();
 
 export default function LoginPage() {
-  console.log(process.env.REACT_APP_FIREBASE_KEY)
+  // console.log(process.env.REACT_APP_FIREBASE_KEY)
   const navigate=useNavigate();
   const [errorMessage, setErrorMessage] = React.useState('');
 
@@ -28,10 +28,10 @@ export default function LoginPage() {
     const data = new FormData(event.currentTarget);
     const email = data.get('email');
     const password = data.get('password');
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    // console.log({
+    //   email: data.get('email'),
+    //   password: data.get('password'),
+    // });
 
     try {
       await signInWithEmailAndPassword(auth,email,password);
@@ -51,7 +51,7 @@ export default function LoginPage() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://source.unsplash.com/random)',
+            backgroundImage: `url("loginbackground.png")`,
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],

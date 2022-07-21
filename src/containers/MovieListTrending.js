@@ -27,7 +27,7 @@ const MovieListTrending = () =>{
     }, []);
     return(
         <div>
-            <h3>Trending Movies</h3>
+                <h3>Trending Movies</h3>
             <Swiper slidesPerView={5}
                     spaceBetween={10}
                     navigation={true}

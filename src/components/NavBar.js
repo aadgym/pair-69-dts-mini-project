@@ -32,22 +32,9 @@ const Navbar = () => {
         <Toolbar>
           <MovieFilter sx={{ display: 'flex', mr: 1 }} />
           <div className="menuContainer">
-          <Button key="Home" className="HeadMenu">
-            Home
-          </Button>
-          <Button className="HeadMenu">Series</Button>
-          <Typography className="HeadMenu">Movie</Typography>
-          <Typography className="HeadMenu">New and Popular</Typography>
-          <Typography className="HeadMenu">My List</Typography>
+            <Typography>The Movie App</Typography>
           </div>
           
-          <Box sx={{ display: 'block' }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
-            ))}
-          </Box>
           <Box sx={{ display: 'flex' }}>
             <IconButton sx={{ padding: 1 }}>
                 <Logout onClick={onLogout} />

@@ -1,3 +1,4 @@
+import * as React from 'react';
 import tmdbApi from '../api/tmdbApi';
 import { Box } from '@mui/material';
 import { useParams } from "react-router-dom";
