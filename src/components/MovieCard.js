@@ -8,7 +8,7 @@ const BASE_IMAGE_URL = "http://image.tmdb.org/t/p/original";
 
 const MovieCard = ({ movie }) => {
     return (
-      <Card id={movie.id} sx={{ display: 'flex', width: 400, margin: 5 }}>
+      <Card id={movie.id} sx={{ display: 'flex', margin: 5 }}>
         <CardMedia
           component="img"
           sx={{ width: 150, height: 225 }}
