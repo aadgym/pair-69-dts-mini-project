@@ -3,7 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../auth/firebase';
 import MovieList from './MovieList';
-import CobaSwiper from '../components/CobaSwiper'
+// import CobaSwiper from '../components/CobaSwiper'
 import MovieListTrending from './MovieListTrending';
 
 const HomePage = () => {

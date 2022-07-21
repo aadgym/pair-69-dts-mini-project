@@ -6,25 +6,40 @@ import "swiper/css/navigation"
 import "./styles.css"
 import { Navigation } from "swiper";
 
+import { Box } from '@mui/material';
+import { useEffect, useState } from 'react';
+
+import MovieCard from '../components/MovieCard';
+import tmdbApi from '../api/tmdbApi';
+
+
 const MovieListTrending = () =>{
     console.log("this is the swiper")
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        const fetchMovies = async () => {
+            const fetchedMovies = await tmdbApi.get("/trending/movie/week");
+            setMovies(fetchedMovies.data.results);
+        }
+        
+        fetchMovies();
+    }, []);
     return(
         <div>
-            <Swiper slidesPerView={3}
-                    spaceBetween={30}
+            <h3>Trending Movies</h3>
+            <Swiper slidesPerView={5}
+                    spaceBetween={10}
                     navigation={true}
                     loop={true}
                     modules={[Navigation]}
                     className="mySwiper">
-                <SwiperSlide><h2>Slide 1</h2></SwiperSlide>
-                <SwiperSlide><h2>Slide 2</h2></SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
+
+            {
+                movies.map(movie => (
+                    <SwiperSlide><MovieCard movie={movie}></MovieCard></SwiperSlide>
+                ))
+            }
             </Swiper>
         </div>
     )

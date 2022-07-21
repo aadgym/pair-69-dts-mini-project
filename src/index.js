@@ -7,12 +7,19 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import LoginPage from './containers/LoginPage';
 import SignUpPage from './containers/SignUpPage';
 import ProtectedRoute from './components/ProtectedRoute';
+import MovieDetail from './containers/MovieDetail';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+        <Route path="moviedetail/:movieid" element={
+          <ProtectedRoute>
+            <MovieDetail/>
+          </ProtectedRoute>
+        }>
+        </Route>
         <Route path="/" element={ 
           <ProtectedRoute>
             <App/>
